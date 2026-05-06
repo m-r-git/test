@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Add Contact</title></head>
+<body>
+<script>
+  const ua = navigator.userAgent;
+  if (/android/i.test(ua)) {
+    window.location.href = "intent:#Intent;action=android.intent.action.INSERT;type=vnd.android.cursor.dir/contact;S.name=Test%20Person;S.phone=%2B1234567890;S.email=test@example.com;end";
+  } else {
+    window.location.href = "contact.vcf";
+  }
+</script>
+<p>If nothing happens, <a href="contact.vcf">tap here</a>.</p>
+</body>
+</html>
